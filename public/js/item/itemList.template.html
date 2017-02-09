@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          Sort items by
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <li><a ng-click="sortType = 'created_at'">Post Date</a></li>
+          <li><a ng-click="sortType = 'price'">Price: Lowest to highest</a></li>
+          <li><a ng-click="sortType = '-price'">Price: Highest to lowest</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+       Search: <input type="search" placeholder="Enter search term" ng-model="searchItem">
+    </div>
+
+    <div class="col-md-4">
+       <button type="submit" class="btn btn-default" ng-click="$ctrl.openForm()">Sell my stuff</button>
+    </div>
+
+  </div>
+
+  <form ng-if="$ctrl.newItemForm === true" ng-submit="$ctrl.createItem()" novalidate>
+
+     <div>
+         <label for="title">Title: </label>
+         <input type="text" placeholder="Title" name="title" ng-model="$ctrl.item.title" required>
+     </div>
+
+     <div>
+         <label for="price">Price: </label>
+         <input type="text" placeholder="Price" name="price" ng-model="$ctrl.item.price" required>
+     </div>
+
+     <div>
+         <label for="item_image">Item Image: </label>
+         <input type="text" placeholder="Image" name="item_image" ng-model="$ctrl.item.item_image" required>
+     </div>
+
+     <div>
+         <label for="description">Description: </label>
+         <textarea placeholder="Description" name="description" ng-model="$ctrl.item.description" required></textarea>
+     </div>
+
+     <button type="submit">Create</button>
+
+  </form>
+
+  <hr>
+
+  <div ng-repeat="item in $ctrl.items | orderBy:sortType:sortReverse | filter:searchItem">
+     <img ng-src="{{ item.item_image }}" class="img-responsive" alt="Image of item for sale" />
+     <p>Title: {{ item.title }}</p>
+     <p>Price: ${{ item.price | number:2 }}</p>
+     <p>Description: {{ item.description }}</p>
+     <button type="submit" ui-sref="edit({id: item.id})" name="edit">edit</button>
+     <hr>
+
+  </div>
+</div><!-- container -->
