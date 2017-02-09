@@ -7,7 +7,8 @@ footer {
 }
 
 .media-object {
-  max-width: 200px;
+  max-width: 12.5em;
+  margin-right: 1.5em;
 }
 
 .btn-margin {
