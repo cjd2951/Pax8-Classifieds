@@ -1,3 +1,11 @@
 body {
   padding-top: 70px;
 }
+
+footer {
+  margin-top: 10px;
+}
+
+.media-object {
+  max-width: 200px;
+}
