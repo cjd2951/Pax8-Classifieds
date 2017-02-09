@@ -14,3 +14,7 @@ footer {
 .btn-margin {
   margin: 0.5em 0;
 }
+
+.header {
+  border-bottom: 2px solid #de650d
+}
