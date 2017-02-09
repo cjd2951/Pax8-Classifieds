@@ -18,3 +18,7 @@ footer {
 .header {
   border-bottom: 2px solid #de650d
 }
+
+a:hover {
+  color: #9d9d9d !important;
+}
