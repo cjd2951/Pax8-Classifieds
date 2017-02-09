@@ -25,7 +25,7 @@ The app should implement the following:
 - Valid, well-implemented HTML and CSS
 - Readable and logical JavaScript
 - Responsiveness for different screen sizes and orientations
-- A logical and intuitive UI 
+- A logical and intuitive UI
 
 # Tips
 
@@ -40,3 +40,7 @@ The app should implement the following:
 > *"Picasso had a saying -- 'good artists copy; great artists steal' -- and we have always been shameless about stealing great ideas."*
 >
 > — Steve Jobs
+
+
+link to deployed site
+https://bradefting-classifieds-3.herokuapp.com/
