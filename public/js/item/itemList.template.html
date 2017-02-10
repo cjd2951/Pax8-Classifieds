@@ -33,29 +33,29 @@
 
     <div class="col-md-10 col-md-offset-1">
       <div class="well">
-        <form novalidate name="newItem" ng-submit="$ctrl.createItem()">
+        <form novalidate name="$ctrl.newItem" ng-submit="$ctrl.createItem()">
 
          <div class="form-group">
-             <label for="title" ng-class="{'has-error': newItem.title.$invalid && newItem.title.$touched}">Title: </label>
+             <label for="title" ng-class="{'has-error': $ctrl.newItem.title.$invalid && $ctrl.newItem.title.$touched}">Title: </label>
              <input type="text" placeholder="Title" name="title" ng-model="$ctrl.item.title" class="form-control" required>
          </div>
 
          <div class="form-group">
-             <label for="price" ng-class="{'has-error': newItem.price.$invalid && newItem.price.$touched}">Price: </label>
+             <label for="price" ng-class="{'has-error': $ctrl.newItem.price.$invalid && $ctrl.newItem.price.$touched}">Price: </label>
              <input type="text" placeholder="Price" name="price" ng-model="$ctrl.item.price" class="form-control" required>
          </div>
 
          <div class="form-group">
-             <label for="item_image" ng-class="{'has-error': newItem.item_image.$invalid && newItem.item_image.$touched}">Item Image: </label>
+             <label for="item_image" ng-class="{'has-error': $ctrl.newItem.item_image.$invalid && $ctrl.newItem.item_image.$touched}">Item Image: </label>
              <input type="text" placeholder="Image" name="item_image" ng-model="$ctrl.item.item_image" class="form-control" required>
          </div>
 
          <div class="form-group">
-             <label for="description" ng-class="{'has-error': newItem.description.$invalid && newItem.description.$touched}">Description: </label>
+             <label for="description" ng-class="{'has-error': $ctrl.newItem.description.$invalid && $ctrl.newItem.description.$touched}">Description: </label>
              <textarea placeholder="Description" name="description" ng-model="$ctrl.item.description" class="form-control" required></textarea>
          </div>
 
-         <button type="submit" class="btn btn-primary" ng-disabled="newItem.$invalid">Sell it!</button>
+         <button type="submit" class="btn btn-primary" ng-disabled="$ctrl.newItem.$invalid">Sell it!</button>
 
          <button type="button" class="btn btn-default" ng-click="$ctrl.openForm()">No, I can't sell it.</button>
 
