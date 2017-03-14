@@ -7,21 +7,30 @@
      templateUrl: '/js/item/itemEdit.template.html'
    });
 
-   itemEditController.$inject = ['$http', '$stateParams', '$state'];
+   itemEditController.$inject = ['$http', '$stateParams', '$state', 'itemService'];
 
-   function itemEditController($http, $stateParams, $state){
+   function itemEditController($http, $stateParams, $state, itemService){
      const vm = this;
 
      vm.$onInit = $onInit;
      vm.editItem = editItem;
      vm.deleteItem = deleteItem;
 
-     function $onInit() {
-       $http.get(`/classifieds/${$stateParams.id}`)
-         .then((response) => {
-           vm.item = response.data;
-         });
-     }
+     vm.itemService = itemService;
+
+    //  function $onInit() {
+    //    $http.get(`/classifieds/${$stateParams.id}`)
+    //      .then((response) => {
+    //        vm.item = response.data;
+    //      });
+    //  }
+
+    function $onInit() {
+      itemService.getItem(`${$stateParams.id}`)
+       .then((item) => {
+         vm.item = item;
+       });
+    }
 
      function editItem() {
        $http.patch(`/classifieds/${$stateParams.id}`, vm.item)

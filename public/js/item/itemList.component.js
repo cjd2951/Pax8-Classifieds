@@ -7,20 +7,32 @@
       templateUrl: '/js/item/itemList.template.html'
     });
 
-    itemListController.$inject = ['$http'];
+    itemListController.$inject = ['$http', 'itemService'];
 
-    function itemListController($http){
+    function itemListController($http, itemService){
       const vm = this;
+
+      //add itemService to inject and as argument to function
+      // vm.itemService = itemService;
 
       vm.newItemForm = false;
       vm.$onInit = $onInit;
       vm.createItem = createItem;
       vm.openForm = openForm;
 
+      vm.itemService = itemService;
+
+      // function $onInit(){
+      //   $http.get('/classifieds')
+      //     .then((response) => {
+      //       vm.items = response.data;
+      //     });
+      // }
+
       function $onInit(){
-        $http.get('/classifieds')
-          .then((response) => {
-            vm.items = response.data;
+        itemService.getItems()
+          .then((items) =>{
+            vm.items = items;
           });
       }
 
