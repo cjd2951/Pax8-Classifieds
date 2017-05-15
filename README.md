@@ -1,12 +1,12 @@
 # Galvanize Classified
 
-Third quarter assessment for Galvanize Web Development Program. Technologies used to complete are AngularJS, Bootstrap, Node, Express, Knex.js, PostgreSQL, Mocha, Chai, and Heroku.
+This is my third quarter assessment for the Galvanize Web Development Program. It is a full CRUD app that uses AngularJS on the front-end. The other technologies I used are Bootstrap, Node, Express, Knex.js, PostgreSQL, Mocha, Chai, and Heroku.
 
 ![alt text](https://github.com/bradefting/Galvanize_Classified_3/blob/master/public/images/galvanize-classified-ReadMe.jpg)
 
 
 link to deployed site
-https://bradefting-classifieds-3.herokuapp.com/
+https://galvanize-classified.herokuapp.com/
 
 ## Project Description
 
