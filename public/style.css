@@ -23,6 +23,11 @@ footer {
   border-bottom: 2px solid #de650d
 }
 
+.navbar-brand {
+  font-size: 20px;
+  color: #ebebeb !important;
+}
+
 #headline {
   background: url(./images/games3.jpg) no-repeat center center fixed;
   display: table;
