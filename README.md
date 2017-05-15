@@ -1,18 +1,16 @@
-# Galvanize Classified - Part 3
+# Galvanize Classified
+
+Third quarter assessment for Galvanize Web Development Program. Technologies used to complete are AngularJS, Bootstrap, Node, Express, Knex.js, PostgreSQL, Mocha, Chai, and Heroku.
+
+![alt text](https://github.com/bradefting/Galvanize_Classified_3/blob/master/public/images/galvanize-classified-ReadMe.jpg)
+
+
+link to deployed site
+https://bradefting-classifieds-3.herokuapp.com/
 
 ## Project Description
 
-Now is your time to show off and make your Angular app pretty.
-
-### Requirements
-
-You are responsible for:
-
-- [ ] Forking and cloning this GitHub Repo.
-- [ ] Styling your Angular front end.
-- [ ] Deployment of the App on Heroku.
-
-### Must haves
+### Requirements of front-end
 
 The app should implement the following:
 
@@ -20,6 +18,25 @@ The app should implement the following:
 - Readable and logical JavaScript
 - Responsiveness for different screen sizes and orientations
 - A logical and intuitive UI
+
+### Functionality in Angular
+
+The app should do the following:
+
+- Display all of the ads
+- Post a new ad
+- Edit existing ads
+- Delete an ad
+- Filter ads (titles and descriptions)
+- Sort ads based on posting date and price
+
+### Server and database requirements
+
+- Creating the test and development databases locally.
+- Creating the database migration.
+- Creating the database seed data.
+- Creating the RESTful API to handle classified resource.
+
 
 # Tips
 
@@ -34,9 +51,3 @@ The app should implement the following:
 > *"Picasso had a saying -- 'good artists copy; great artists steal' -- and we have always been shameless about stealing great ideas."*
 >
 > — Steve Jobs
-
-![alt text](https://github.com/bradefting/Galvanize_Classified_3/blob/master/public/images/galvanize-classified-ReadMe.jpg)
-
-
-link to deployed site
-https://bradefting-classifieds-3.herokuapp.com/
