@@ -26,6 +26,13 @@ footer {
 .navbar-brand {
   font-size: 20px;
   color: #ebebeb !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar-text {
+  color: #ebebeb !important;
+  letter-spacing: 1px;
 }
 
 #headline {
