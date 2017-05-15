@@ -1,14 +1,8 @@
 # Galvanize Classified - Part 3
 
-## Read the entire README before beginning. Commit often.
-
 ## Project Description
 
 Now is your time to show off and make your Angular app pretty.
-
-### Getting Started
-
-Copy your files from **Part 2** into your project directory.  This is important: make sure you don't edit the part 2 files so we can evaluate each part independently.  This also allows you to redo pieces of this assessment individually.
 
 ### Requirements
 
@@ -40,6 +34,8 @@ The app should implement the following:
 > *"Picasso had a saying -- 'good artists copy; great artists steal' -- and we have always been shameless about stealing great ideas."*
 >
 > — Steve Jobs
+
+![alt text](https://github.com/bradefting/Galvanize_Classified_3/blob/master/public/images/galvanize-classified-ReadMe.jpg)
 
 
 link to deployed site
