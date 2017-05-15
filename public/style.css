@@ -1,5 +1,5 @@
 body {
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 footer {
@@ -11,12 +11,60 @@ footer {
   margin-right: 1.5em;
 }
 
+.top-margin{
+  margin-top: 1em;
+}
+
 .btn-margin {
   margin: 0.5em 0;
 }
 
 .header {
   border-bottom: 2px solid #de650d
+}
+
+#headline {
+  background: url(./images/games3.jpg) no-repeat center center fixed;
+  display: table;
+  height: 500px;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.text-vcenter {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.headline-bigText{
+  font-size: 50px;
+  -webkit-text-stroke: 1px #9f0101;
+  color: white;
+  text-shadow:
+      3px 3px 0 #000,
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+  -webkit-font-smoothing: antialiased;
+}
+
+.headline-smallText{
+  color: #e3e3e3;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-shadow:
+      3px 3px 0 #000,
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+  -webkit-font-smoothing: antialiased
 }
 
 a:hover {
