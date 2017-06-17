@@ -33,6 +33,7 @@
         itemService.getItems()
           .then((items) =>{
             vm.items = items;
+            // console.log(items);
           });
       }
 
@@ -41,6 +42,7 @@
           .then((response) => {
             vm.items.push(response.data);
             vm.newItemForm = false;
+            vm.$onInit();
             delete vm.item;
           });
       }

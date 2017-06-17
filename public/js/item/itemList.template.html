@@ -92,6 +92,9 @@
             <br>
             {{ item.description }}
           </p>
+          <div><strong>Listed:</strong>
+            <span am-time-ago="item.created_at"></span>
+          </div>
           <button type="submit" class="btn btn-default" ui-sref="edit({id: item.id})" name="edit">edit</button>
 
           <button type="button" class="btn btn-success" name="buy" disabled>BUY IT NOW!</button>
