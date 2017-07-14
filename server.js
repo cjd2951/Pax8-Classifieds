@@ -7,6 +7,9 @@ const bodyParser = require('body-parser');
 const messages = require('./routes/classifieds');
 const port = process.env.PORT || 3000;
 
+// for Prerender.io SEO
+app.use(require('prerender-node'));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
