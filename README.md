@@ -1,6 +1,6 @@
-# Galvanize Classified
+# Pax8 Classified
 
-This is my third quarter assessment for the Galvanize Web Development Program. It is a full CRUD app that uses AngularJS on the front-end. The other technologies I used are Bootstrap, Node, Express, Knex.js, PostgreSQL, Mocha, Chai, and Heroku.
+This is a full CRUD app that I use as a playground for Pax8 projects. The technologies used in this app are AngularJS(v1.6.0), Bootstrap(v3.3.7), Node, Express, Knex.js, PostgreSQL, Mocha, Chai, and Heroku.
 
 ![alt text](https://github.com/bradefting/Galvanize_Classified_3/blob/master/public/images/galvanize-classified-ReadMe.jpg)
 
@@ -38,16 +38,9 @@ The app should do the following:
 - Creating the RESTful API to handle classified resource.
 
 
-# Tips
+### Other Tech used
 
-> *Simplicity is the ultimate sophistication*.
->
-> — Leonardo da Vinci 
-
-> *Everything should be made as **simple as possible**, **but no simpler**.*
->
-> — Albert Einstein
-
-> *"Picasso had a saying -- 'good artists copy; great artists steal' -- and we have always been shameless about stealing great ideas."*
->
-> — Steve Jobs
+- Google Recaptcha to minimize bots from posting
+- Google Analytics for website tracking
+- Angular Moment for time keeping on the postings
+- Angular UI-Router
