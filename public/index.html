@@ -1,47 +1,65 @@
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <base href="/">
-  <title>Pax8 Classified</title>
-  <meta name="google-site-verification" content="ZWIo-FUwpLRH5JnEZVRnh8Q7zDE3IZ7mPMV5ZBg356s" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="/">
+    <title>Pax8 Classified</title>
+
+    <!-- <meta name="google-site-verification" content="ZWIo-FUwpLRH5JnEZVRnh8Q7zDE3IZ7mPMV5ZBg356s" /> -->
+
+    <!--Google Recaptcha  -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
+    <!--Google Analytics  -->
+    <script>
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39152480-3', 'auto');
+    </script>
+
 </head>
 <body>
 
-  <!-- <app></app> -->
-  <ui-view></ui-view>
+    <ui-view></ui-view>
 
-  <!--angular  -->
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
+    <!--angular  -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.js"></script>
 
-  <!--ui-router  -->
-  <script src="https://unpkg.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.js"></script>
+    <!--ui-router  -->
+    <script src="https://unpkg.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.js"></script>
 
-  <!--angular scripts -->
-  <script src="/js/app/app.module.js" defer></script>
-  <script src="/js/app/app.component.js" defer></script>
-  <script src="/js/app/app.config.js" defer></script>
-  <script src="/js/item/itemList.component.js" defer></script>
-  <script src="/js/item/itemEdit.component.js" defer></script>
-  <script src="/js/services/item.service.js" defer></script>
+    <!-- recaptcha  -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-recaptcha/4.1.2/angular-recaptcha.min.js"></script>
 
-  <!--jQuery for Boostrap  -->
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <!--angular scripts -->
+    <script src="/js/app/app.module.js" defer></script>
+    <script src="/js/app/app.component.js" defer></script>
+    <script src="/js/app/app.config.js" defer></script>
+    <script src="/js/item/itemList.component.js" defer></script>
+    <script src="/js/item/itemEdit.component.js" defer></script>
+    <script src="/js/services/item.service.js" defer></script>
 
-  <!--bootstrap CSS  -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--jQuery for Boostrap  -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-  <!--bootstrap JS  -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--bootstrap CSS  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  <!-- CSS  -->
-  <link rel="stylesheet" type="text/css" href="/style.css">
+    <!--bootstrap JS  -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <!--moments -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/1.0.1/angular-moment.min.js" defer></script>
+    <!-- CSS  -->
+    <link rel="stylesheet" type="text/css" href="/style.css">
+
+    <!--moments -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/1.0.1/angular-moment.min.js" defer></script>
 
 </body>
 </html>

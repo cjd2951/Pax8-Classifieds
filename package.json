@@ -15,6 +15,9 @@
   "dependencies": {
     "angular": "^1.6.4",
     "angular-moment": "^1.0.1",
+    "angular-recaptcha": "^4.1.2",
+    "angulartics": "^1.4.0",
+    "angulartics-google-tag-manager": "0.0.1",
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",

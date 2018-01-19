@@ -22,6 +22,9 @@
 
       vm.itemService = itemService;
 
+      vm.captchaKey = "6LffS0EUAAAAAKmhNIY4MewMU1bzphBHdpXz6RRD";
+      vm.captchaToken = null;
+
       // function $onInit(){
       //   $http.get('/classifieds')
       //     .then((response) => {

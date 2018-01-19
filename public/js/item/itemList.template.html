@@ -1,108 +1,116 @@
 <section class="row">
-  <div id="headline">
-    <div class="text-vcenter">
-      <h1 class="headline-bigText">Pax8 Classified</h1>
-      <h4 class="headline-smallText">A place to buy & sell the best video games</h4>
+    <div id="headline">
+        <div class="text-vcenter">
+            <h1 class="headline-bigText">Pax8 Classified</h1>
+            <h4 class="headline-smallText">A place to buy & sell the best video games</h4>
+        </div>
     </div>
-  </div>
 </section>
 
 <main class="container">
-  <section class="row top-margin">
-    <div class="col-xs-6 col-sm-4">
-      <div class="dropdown btn-margin">
-        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          Sort items by
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li><a ng-click="sortType = 'created_at'">Post Date</a></li>
-          <li><a ng-click="sortType = 'price'">Price: Lowest to highest</a></li>
-          <li><a ng-click="sortType = '-price'">Price: Highest to lowest</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="col-xs-6 col-sm-4">
-      <div class="btn-margin">
-       Search: <input type="search" placeholder="Enter search term" ng-model="searchItem">
-      </div>
-    </div>
-
-    <div class="col-xs-12 col-sm-2 col-sm-offset-2">
-      <div class="btn-margin">
-       <button type="submit" class="btn btn-primary" ng-click="$ctrl.openForm()">Sell my stuff</button>
-     </div>
-    </div>
-  </section>
-
-  <section class="row" ng-if="$ctrl.newItemForm === true">
-    <br>
-
-    <div class="col-md-10 col-md-offset-1">
-      <div class="well">
-        <form novalidate name="$ctrl.newItem" ng-submit="$ctrl.createItem()">
-
-         <div class="form-group">
-             <label for="title" ng-class="{'has-error': $ctrl.newItem.title.$invalid && $ctrl.newItem.title.$touched}">Title: </label>
-             <input type="text" placeholder="Title" name="title" ng-model="$ctrl.item.title" class="form-control" required>
-         </div>
-
-         <div class="form-group">
-             <label for="price" ng-class="{'has-error': $ctrl.newItem.price.$invalid && $ctrl.newItem.price.$touched}">Price: </label>
-             <input type="text" placeholder="Price" name="price" ng-model="$ctrl.item.price" class="form-control" required>
-         </div>
-
-         <div class="form-group">
-             <label for="item_image" ng-class="{'has-error': $ctrl.newItem.item_image.$invalid && $ctrl.newItem.item_image.$touched}">Item Image: </label>
-             <input type="text" placeholder="Image" name="item_image" ng-model="$ctrl.item.item_image" class="form-control" required>
-         </div>
-
-         <div class="form-group">
-             <label for="description" ng-class="{'has-error': $ctrl.newItem.description.$invalid && $ctrl.newItem.description.$touched}">Description: </label>
-             <textarea placeholder="Description" name="description" ng-model="$ctrl.item.description" class="form-control" required></textarea>
-         </div>
-
-         <button type="submit" class="btn btn-primary" ng-disabled="$ctrl.newItem.$invalid">Sell it!</button>
-
-         <button type="button" class="btn btn-default" ng-click="$ctrl.openForm()">No, I can't sell it.</button>
-
-        </form>
-
-      </div>
-    </div>
-  </section>
-
-  <br>
-
-  <section class="row" ng-repeat="item in $ctrl.items | orderBy:sortType:sortReverse | filter:searchItem">
-    <div class="col-md-12">
-      <div class="well">
-        <div class="media-left">
-          <img class="media-object" ng-src="{{ item.item_image }}" alt="Image of item">
+    <section class="row top-margin">
+        <div class="col-xs-6 col-sm-4">
+            <div class="dropdown btn-margin">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Sort items by
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a ng-click="sortType = 'created_at'">Post Date</a></li>
+                    <li><a ng-click="sortType = 'price'">Price: Lowest to highest</a></li>
+                    <li><a ng-click="sortType = '-price'">Price: Highest to lowest</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="media-body">
-          <h4 class="media-heading">
-            {{ item.title }}
-          </h4>
-          <div class="text-right">
-            Price: <strong>${{ item.price | number:2 }}</strong>
-          </div>
-          <p><strong>Product Description:</strong>
-            <br>
-            {{ item.description }}
-          </p>
-          <div><strong>Listed:</strong>
-            <span am-time-ago="item.created_at"></span>
-          </div>
-          <button type="submit" class="btn btn-default" ui-sref="edit({id: item.id})" name="edit">edit</button>
 
-          <button type="button" class="btn btn-success" name="buy" disabled>BUY IT NOW!</button>
+        <div class="col-xs-6 col-sm-4">
+            <div class="btn-margin">
+                 Search: <input type="search" placeholder="Enter search term" ng-model="searchItem">
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-2 col-sm-offset-2">
+            <div class="btn-margin">
+                 <button type="submit" class="btn btn-primary" ng-click="$ctrl.openForm()">Sell my stuff</button>
+             </div>
+        </div>
+    </section>
+
+    <section class="row" ng-if="$ctrl.newItemForm === true">
+
+        <div class="col-md-10 col-md-offset-1" style="margin-top:1.5em;">
+            <div class="well">
+                <form novalidate name="$ctrl.newItem" ng-submit="$ctrl.createItem()">
+
+                   <div class="form-group">
+                       <label for="title" ng-class="{'has-error': $ctrl.newItem.title.$invalid && $ctrl.newItem.title.$touched}">Title: </label>
+                       <input type="text" placeholder="Title" name="title" ng-model="$ctrl.item.title" class="form-control" required>
+                   </div>
+
+                   <div class="form-group">
+                       <label for="price" ng-class="{'has-error': $ctrl.newItem.price.$invalid && $ctrl.newItem.price.$touched}">Price: </label>
+                       <input type="text" placeholder="Price" name="price" ng-model="$ctrl.item.price" class="form-control" required>
+                   </div>
+
+                   <div class="form-group">
+                       <label for="item_image" ng-class="{'has-error': $ctrl.newItem.item_image.$invalid && $ctrl.newItem.item_image.$touched}">Item Image: </label>
+                       <input type="text" placeholder="Image" name="item_image" ng-model="$ctrl.item.item_image" class="form-control" required>
+                   </div>
+
+                   <div class="form-group">
+                       <label for="description" ng-class="{'has-error': $ctrl.newItem.description.$invalid && $ctrl.newItem.description.$touched}">Description: </label>
+                       <textarea placeholder="Description" name="description" ng-model="$ctrl.item.description" class="form-control" required></textarea>
+                   </div>
+
+                    <!--recaptcha  -->
+                    <div class="row" ng-show="!$ctrl.captchaToken" style="margin-bottom:1em;">
+                        <div vc-recaptcha key="$ctrl.captchaKey"style="display:flex; justify-content:center;"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" ng-disabled="$ctrl.newItem.$invalid">Sell it!</button>
+
+                    <button type="button" class="btn btn-default" ng-click="$ctrl.openForm()">No, I can't sell it.</button>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="row" ng-repeat="item in $ctrl.items | orderBy:sortType:sortReverse | filter:searchItem" style="margin-top:1.5em;">
+        <div class="col-md-12">
+
+            <div class="well">
+
+                <div class="media-left">
+                    <img class="media-object" ng-src="{{ item.item_image }}" alt="Image of item">
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{ item.title }}</h4>
+
+                    <div class="text-right">
+                        Price: <strong>${{ item.price | number:2 }}</strong>
+                    </div>
+
+                    <p><strong>Product Description:</strong>
+                    <br>
+                        {{ item.description }}
+                    </p>
+                    <div><strong>Listed:</strong>
+                        <span am-time-ago="item.created_at"></span>
+                    </div>
+
+                    <div style="margin-top:.4em;">
+                        <button type="submit" class="btn btn-default" ui-sref="edit({id: item.id})" name="edit">edit</button>
+
+                        <button type="button" class="btn btn-success" name="buy" disabled>BUY IT NOW!</button>
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
-      </div>
-
-    </div>
-  </section>
+    </section>
 
 </main>
