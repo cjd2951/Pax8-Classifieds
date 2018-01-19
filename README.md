@@ -1,14 +1,14 @@
-# Pax8 Classified
+# Pax8 Classifieds
 
-This is a full CRUD app that I use as a playground for Pax8 projects. The technologies used in this app are AngularJS(v1.6.0), Bootstrap(v3.3.7), Node, Express, Knex.js, PostgreSQL, Mocha, Chai, and Heroku.
+This is a full CRUD app based on a project I completed at Galvanize that I use as a playground for Pax8 projects. The technologies used in this app are AngularJS(v1.6.0), Bootstrap(v3.3.7), Node, Express, Knex.js, PostgreSQL, Mocha, Chai, and Heroku.
 
 ![alt text](https://github.com/bradefting/Galvanize_Classified_3/blob/master/public/images/galvanize-classified-ReadMe.jpg)
 
 
 link to deployed site
-https://galvanize-classified.herokuapp.com/
+https://pax8-classifieds.herokuapp.com/
 
-## Project Description
+## Project Description from Galvanize
 
 ### Requirements of front-end
 
