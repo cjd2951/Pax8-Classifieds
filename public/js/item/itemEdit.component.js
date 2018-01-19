@@ -18,7 +18,7 @@
 
      vm.itemService = itemService;
 
-     vm.captchaKey = "6LffS0EUAAAAAKmhNIY4MewMU1bzphBHdpXz6RRD";
+     vm.captchaKey = "6LeShEEUAAAAALc6ej2mCc_W8R8Ljeo6DKRC0KCA";
      vm.captchaToken = null;
 
     //  function $onInit() {
