@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <base href="/">
-    <title>Pax8 Classified</title>
+    <title>Pax8 Classifieds</title>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WW7TNTG');</script>
+    <!-- End Google Tag Manager -->
 
     <!-- <meta name="google-site-verification" content="ZWIo-FUwpLRH5JnEZVRnh8Q7zDE3IZ7mPMV5ZBg356s" /> -->
 
     <!--Google Recaptcha  -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
 
-    <!--Google Analytics  -->
-    <script>
+    <!--Google Analytics OLD-->
+    <!-- <script>
 
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -21,10 +29,25 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
       ga('create', 'UA-39152480-3', 'auto');
+    </script> -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112847574-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112847574-1');
     </script>
 
 </head>
 <body>
+
+      <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW7TNTG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <ui-view></ui-view>
 
@@ -33,6 +56,9 @@
 
     <!--ui-router  -->
     <script src="https://unpkg.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.js"></script>
+
+    <!--angulartics  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angulartics/1.4.0/angulartics.min.js"></script>
 
     <!-- recaptcha  -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-recaptcha/4.1.2/angular-recaptcha.min.js"></script>
